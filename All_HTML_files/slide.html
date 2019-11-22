@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>change</title>
+<link href="" rel="stylesheet">
+<script>
+var pic=["magazine.jpg","magazine1.jpg","s3.png"];
+var n=0,k=pic.length;
+function changePic(){
+document.getElementById("divq").getElementsByTagName("img")[0].src = pic[n%pic.length];
+    if(n<pic.length-1){
+        n=n+1;
+    }
+    else{
+        n=0;
+    }
+setTimeout("changePic()",2000);}
+</script>
+</head>
+<body onload="changePic();"  id="body" style="background:black" >
+<div id="divq" style="height:350px;width:800px; margin:0 auto;border:5px solid black;">
+    <img  class="img5" src="magazine.jpg" style="width:100%;height:100%"/>
+</div>
+</body>
+</html>
